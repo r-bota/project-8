@@ -45,7 +45,7 @@ emplpoyeeDiv.addEventListener("click", e => {
 })
 
 function modalCreate(indexD) {
-
+    let dob = new Date(emp[indexD].dob.date);
     modalHTML = `
     <div class="modal-box">
     <button id="modal-close">X</button>
@@ -56,7 +56,8 @@ function modalCreate(indexD) {
     <hr />
     <p>${emp[indexD].phone}</p>
     <p>${emp[indexD].location.street.number} ${emp[indexD].location.street.name}, ${emp[indexD].location.state} ${emp[indexD].location.postcode}</p>
-
+    <p>Birthday: ${dob.getDate()}/${dob.getMonth() + 1}/${dob.getYear()}</p>
+    </div>
     `;
     displayModal()
     closeModalListener()
