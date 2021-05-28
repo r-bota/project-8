@@ -1,7 +1,10 @@
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
-    
+    background: linear-gradient(123deg, #FFFCAC 0%, #FFFFFF 67%), linear-gradient(180deg, #D8D8D8 0%, #6B0000 100%), linear-gradient(142deg, #F9F5F0 0%, #F9F5F0 33%, #F2EAD3 calc(33% + 1px), #F2EAD3 56%, #F4991A calc(56% + 1px), #F4991A 62%, #321313 calc(62% + 1px), #321313 100%);
+background-blend-mode: multiply, overlay, normal;
+background-repeat: no-repeat;
+height: 100vh;
 }
 
 .inline {
@@ -28,8 +31,10 @@ body {
     border: 1px solid rgb(126, 126, 126);
     display: grid;
     grid-template-columns: auto auto;
-    background-color: rgb(255, 255, 255);
+
+    background-color: rgb(52, 46, 56);
     & img {
+        border: whitesmoke 2px solid;
         margin-left: 10px;
         border-radius: 50%;
         align-self: center;
@@ -42,7 +47,7 @@ body {
     display: block;
     & .name {
         margin-bottom: 0;
-        color: rgb(41, 50, 54);
+        color: rgb(245, 243, 244);
         grid-column: 2;
     }
     & p {
