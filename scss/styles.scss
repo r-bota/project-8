@@ -5,12 +5,13 @@ body {
 background-blend-mode: multiply, overlay, normal;
 background-repeat: no-repeat;
 background-size: cover;
-height: 100vh;
+min-height: 100vh;
+height: 100%;
 }
 
 .inline {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #search {
@@ -21,13 +22,17 @@ height: 100vh;
 }
 
 #employees {
- 
-    display: grid;
-    grid-template-columns: 440px;
-    grid-gap: 10px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+    // display: grid;
+    // grid-template-columns: 400px;
+    // grid-gap: 10px;
 }
 
 .employees-div {
+    width: 380px;
+    margin-top: 9px;
     z-index: 1;
     border-radius: 5px;
     border: 1px solid rgb(126, 126, 126);
@@ -110,15 +115,10 @@ height: 100vh;
     float: right;
 }
 
-@media screen and (min-width: 600px)
-{
-    #employees {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
-@media screen and (min-width: 900px) {
-    #employees {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
+
+// @media screen and (min-width: 900px) {
+//     #employees {
+//         width: 460px;
+//     }
+// }

@@ -5,12 +5,13 @@ body {
   background-blend-mode: multiply, overlay, normal;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .inline {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #search {
@@ -21,12 +22,14 @@ body {
 }
 
 #employees {
-  display: grid;
-  grid-template-columns: 440px;
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .employees-div {
+  width: 380px;
+  margin-top: 9px;
   z-index: 1;
   border-radius: 5px;
   border: 1px solid #7e7e7e;
@@ -104,17 +107,6 @@ body {
   margin-right: 5px;
   margin-top: 5px;
   float: right;
-}
-
-@media screen and (min-width: 600px) {
-  #employees {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 900px) {
-  #employees {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
