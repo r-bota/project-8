@@ -4,6 +4,7 @@ body {
   background: linear-gradient(123deg, #FFFCAC 0%, #FFFFFF 67%), linear-gradient(180deg, #D8D8D8 0%, #6B0000 100%), linear-gradient(142deg, #F9F5F0 0%, #F9F5F0 33%, #F2EAD3 calc(33% + 1px), #F2EAD3 56%, #F4991A calc(56% + 1px), #F4991A 62%, #321313 calc(62% + 1px), #321313 100%);
   background-blend-mode: multiply, overlay, normal;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -21,7 +22,7 @@ body {
 
 #employees {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 440px;
   grid-gap: 10px;
 }
 
@@ -103,6 +104,17 @@ body {
   margin-right: 5px;
   margin-top: 5px;
   float: right;
+}
+
+@media screen and (min-width: 600px) {
+  #employees {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 900px) {
+  #employees {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
