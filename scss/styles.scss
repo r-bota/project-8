@@ -1,12 +1,18 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
-    background: linear-gradient(123deg, #FFFCAC 0%, #FFFFFF 67%), linear-gradient(180deg, #D8D8D8 0%, #6B0000 100%), linear-gradient(142deg, #F9F5F0 0%, #F9F5F0 33%, #F2EAD3 calc(33% + 1px), #F2EAD3 56%, #F4991A calc(56% + 1px), #F4991A 62%, #321313 calc(62% + 1px), #321313 100%);
-background-blend-mode: multiply, overlay, normal;
+background-color: hsl(0, 0%, 100%);
 background-repeat: no-repeat;
 background-size: cover;
 min-height: 100vh;
 height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(15, 15, 15);
 }
 
 .inline {
@@ -22,26 +28,26 @@ height: 100%;
 }
 
 #employees {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
-    // display: grid;
-    // grid-template-columns: 400px;
-    // grid-gap: 10px;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
 }
 
 .employees-div {
-    width: 350px;
+    
     margin-top: 9px;
     z-index: 1;
     border-radius: 5px;
-    border: 1px solid rgb(126, 126, 126);
+    border: 1px solid rgb(152, 179, 255);
     display: grid;
     grid-template-columns: auto auto;
 
-    background-color: rgb(52, 46, 56);
+    background-color: rgb(255, 255, 255);
     & img {
-        border: whitesmoke 2px solid;
+        border: rgb(160, 160, 160) 1px solid;
         margin-left: 10px;
         border-radius: 50%;
         align-self: center;
@@ -54,14 +60,14 @@ height: 100%;
     display: block;
     & .name {
         margin-bottom: 0;
-        color: rgb(245, 243, 244);
+        color: rgb(23, 29, 26);
         grid-column: 2;
     }
     & p {
         font-size: 1em;
         margin-top: 0;
         margin-bottom: 0;
-        color:rgb(165, 165, 165);
+        color:rgb(149, 165, 177);
     }
 }
 
@@ -79,7 +85,7 @@ height: 100%;
 
 .modal-box {
     border-radius: 5px;
-    border: solid 1px black;
+    border: solid 1px rgb(152, 179, 255);
     text-align: center;
     margin: 10% auto auto;
     width: 375px;
@@ -100,7 +106,7 @@ height: 100%;
         width: 90%;
     }
     & p {
-        color:rgb(112, 112, 112);
+        color:rgb(97, 102, 119);
     }
 }
 
@@ -116,3 +122,18 @@ height: 100%;
 }
 
 
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    #employees {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    #employees {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

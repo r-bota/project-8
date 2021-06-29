@@ -1,12 +1,18 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: relative;
-  background: linear-gradient(123deg, #FFFCAC 0%, #FFFFFF 67%), linear-gradient(180deg, #D8D8D8 0%, #6B0000 100%), linear-gradient(142deg, #F9F5F0 0%, #F9F5F0 33%, #F2EAD3 calc(33% + 1px), #F2EAD3 56%, #F4991A calc(56% + 1px), #F4991A 62%, #321313 calc(62% + 1px), #321313 100%);
-  background-blend-mode: multiply, overlay, normal;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f0f0f;
 }
 
 .inline {
@@ -22,23 +28,22 @@ body {
 }
 
 #employees {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 .employees-div {
-  width: 350px;
   margin-top: 9px;
   z-index: 1;
   border-radius: 5px;
-  border: 1px solid #7e7e7e;
+  border: 1px solid #98b3ff;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #342e38;
+  background-color: white;
 }
 .employees-div img {
-  border: whitesmoke 2px solid;
+  border: #a0a0a0 1px solid;
   margin-left: 10px;
   border-radius: 50%;
   align-self: center;
@@ -51,14 +56,14 @@ body {
 }
 .wrap .name {
   margin-bottom: 0;
-  color: #f5f3f4;
+  color: #171d1a;
   grid-column: 2;
 }
 .wrap p {
   font-size: 1em;
   margin-top: 0;
   margin-bottom: 0;
-  color: #a5a5a5;
+  color: #95a5b1;
 }
 
 #overlay {
@@ -74,7 +79,7 @@ body {
 
 .modal-box {
   border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px #98b3ff;
   text-align: center;
   margin: 10% auto auto;
   width: 375px;
@@ -96,7 +101,7 @@ body {
   width: 90%;
 }
 .modal-box p {
-  color: #707070;
+  color: #616677;
 }
 
 #modal-close {
@@ -107,6 +112,21 @@ body {
   margin-right: 5px;
   margin-top: 5px;
   float: right;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #employees {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #employees {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
