@@ -28,16 +28,17 @@ h1 {
 }
 
 #employees {
+  width: 95%;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
 .employees-div {
-  margin-top: 9px;
+  max-width: 450px;
   z-index: 1;
-  border-radius: 5px;
-  border: 1px solid #98b3ff;
+  border: 1px solid #5f5f5f;
   display: grid;
   grid-template-columns: auto auto;
   background-color: white;
@@ -55,15 +56,19 @@ h1 {
   display: block;
 }
 .wrap .name {
-  margin-bottom: 0;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+  margin-bottom: 7px;
   color: #171d1a;
   grid-column: 2;
 }
 .wrap p {
+  font-weight: 300;
+  letter-spacing: 0.06em;
   font-size: 1em;
   margin-top: 0;
   margin-bottom: 0;
-  color: #95a5b1;
+  color: #727374;
 }
 
 #overlay {
@@ -78,8 +83,7 @@ h1 {
 }
 
 .modal-box {
-  border-radius: 5px;
-  border: solid 1px #98b3ff;
+  border: solid 2px black;
   text-align: center;
   margin: 10% auto auto;
   width: 375px;
@@ -101,7 +105,11 @@ h1 {
   width: 90%;
 }
 .modal-box p {
-  color: #616677;
+  color: #727272;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 #modal-close {
@@ -114,7 +122,7 @@ h1 {
   float: right;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) {
   h1 {
     font-size: 2rem;
   }
@@ -125,6 +133,7 @@ h1 {
 }
 @media only screen and (min-width: 1000px) {
   #employees {
+    max-width: 1200px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

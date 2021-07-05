@@ -28,20 +28,20 @@ h1 {
 }
 
 #employees {
-//  display: flex;
-//  flex-wrap: wrap;
-//  justify-content: space-around;
+    width: 95%;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
 }
 
 .employees-div {
+
+    max-width: 450px;
     
-    margin-top: 9px;
     z-index: 1;
-    border-radius: 5px;
-    border: 1px solid rgb(152, 179, 255);
+    // border-radius: 5px;
+    border: 1px solid rgb(95, 95, 95);
     display: grid;
     grid-template-columns: auto auto;
 
@@ -59,15 +59,19 @@ h1 {
     margin-bottom: 40px;
     display: block;
     & .name {
-        margin-bottom: 0;
+        border-bottom: 1px solid black;
+        font-weight: 500;
+        margin-bottom: 7px;
         color: rgb(23, 29, 26);
         grid-column: 2;
     }
     & p {
+        font-weight: 300;
+        letter-spacing: 0.06em;
         font-size: 1em;
         margin-top: 0;
         margin-bottom: 0;
-        color:rgb(149, 165, 177);
+        color:rgb(114, 115, 116);
     }
 }
 
@@ -84,8 +88,8 @@ h1 {
 
 
 .modal-box {
-    border-radius: 5px;
-    border: solid 1px rgb(152, 179, 255);
+    // border-radius: 5px;
+    border: solid 2px black;
     text-align: center;
     margin: 10% auto auto;
     width: 375px;
@@ -106,10 +110,14 @@ h1 {
         width: 90%;
     }
     & p {
-        color:rgb(97, 102, 119);
+        color:rgb(114, 114, 114);
     }
 }
 
+
+h3 {
+    font-weight: 500;
+}
 
 #modal-close {
     border: none;
@@ -122,7 +130,7 @@ h1 {
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) {
     h1 {
         font-size: 2rem;
     }
@@ -134,6 +142,7 @@ h1 {
 
 @media only screen and (min-width: 1000px) {
     #employees {
+        max-width: 1200px;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
